@@ -33,3 +33,42 @@ class MainCell1: UITableViewCell {
     }
 
 }
+
+class MainCell2: UITableViewCell {
+    
+    @IBOutlet weak var viewTablecell: UIView!
+    
+    @IBOutlet weak var lblDays: UILabel!
+    
+    @IBOutlet weak var lblSMS: UILabel!
+    @IBOutlet weak var lblMinute: UILabel!
+    @IBOutlet weak var lblGB: UILabel!
+    @IBOutlet weak var lblCountryCount: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblCountryName: UILabel!
+    @IBOutlet weak var imgCountryIc: UIImageView!
+    
+    
+    
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        setdata()
+        
+        
+        // Configure the view for the selected state
+    }
+    
+    
+    func setdata() {
+        setRoundimgIc(ImgView: imgCountryIc)
+        setViewDegin(view: viewTablecell, cornerRadius: 25)
+    }
+}

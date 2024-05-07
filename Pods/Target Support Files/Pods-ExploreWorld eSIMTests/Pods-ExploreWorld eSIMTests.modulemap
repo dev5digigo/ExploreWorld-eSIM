@@ -1,0 +1,6 @@
+framework module Pods_ExploreWorld_eSIMTests {
+  umbrella header "Pods-ExploreWorld eSIMTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

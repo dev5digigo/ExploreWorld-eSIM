@@ -10,13 +10,13 @@ import UIKit
 
 
 extension UIViewController{
-    func settxtBorder(txt: UITextField, borderWidth: CGFloat, borderColor: UIColor?, CornerRadius: CGFloat){
+    func settxtBorder(txt: UITextField, borderWidth: CGFloat = 0, borderColor: UIColor? = nil, cornerRadius: CGFloat) {
         txt.layer.borderWidth = borderWidth
         txt.layer.borderColor = borderColor?.cgColor
-        txt.layer.cornerRadius = CornerRadius
+        txt.layer.cornerRadius = cornerRadius
         txt.clipsToBounds = true
-       
     }
+
     func setlblDesign(lbl: UILabel) {
         lbl.layer.cornerRadius = lbl.frame.height/2
         lbl.clipsToBounds = true
@@ -24,11 +24,19 @@ extension UIViewController{
         lbl.layer.borderColor = UIColor.borderColour2.cgColor
     }
     
-    func setbtnDesign(btn: UIButton) {
-        btn.layer.cornerRadius = btn.frame.height/2
+//    func setbtnDesign(btn: UIButton) {
+//        btn.layer.cornerRadius = btn.frame.height/2
+//        btn.clipsToBounds = true
+//       
+//    }
+    
+    func setbtnDesign(btn: UIButton, borderWidth: CGFloat = 0, borderColor: UIColor? = nil, cornerRadius: CGFloat) {
+        btn.layer.borderWidth = borderWidth
+        btn.layer.borderColor = borderColor?.cgColor
+        btn.layer.cornerRadius = cornerRadius
         btn.clipsToBounds = true
-       
     }
+
     
     func setRoundbtn(btn: UIButton) {
         btn.layer.cornerRadius = btn.frame.height/2
@@ -64,6 +72,12 @@ extension UITableViewCell {
         ImgView.clipsToBounds = true
         
     }
+    
+    func setViewDegin(view: UIView, cornerRadius: CGFloat) {
+        view.layer.cornerRadius = cornerRadius
+        view.clipsToBounds = true
+    }
+
     
 }
 
